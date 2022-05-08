@@ -1,21 +1,18 @@
 
 import Logger from './Logger';
-const emanuel = 'MAOEEEE';
+const myName = 'My Name is X';
 const myLog = new Logger();
-
-myLog.info("XUXU");
-console.log(`EEEEEmanuel valieble is ${emanuel}`);
-
 const myArr  = [1,2,3,4,5,6,7];
+const body = typeof document !== 'undefined' ? document.querySelector('body') : null;
 
-const body = document.querySelector('body');
-
-console.log(body);
+myLog.info("This is a Logger");
+console.log(`The bot name is ${myName}`);
 
 for( const val of myArr){
     console.log(val);
-
-    const myHeading = document.createElement('h1');
-    myHeading.innerText = 'Maoee 11  Div';
-    body.appendChild(myHeading);
+    if(typeof document !== 'undefined'){
+        const myHeading = document.createElement('h1');
+        myHeading.innerHTML = `Heading Sample <span style="color: red"> custom </span> with Id: ${val}`;
+        body.appendChild(myHeading);
+    }
 }

@@ -24,6 +24,7 @@ module.exports = {
         new ESLintPlugin(),
         new HtmlWebpackPlugin({
             template: './src/index.html',
+            inject: false
         })
     ]
 };
